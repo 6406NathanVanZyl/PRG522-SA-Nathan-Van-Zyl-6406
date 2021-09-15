@@ -33,10 +33,4 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: DownloadBuildArtifacts@1
-  inputs:
-    buildType: 'current'
-    downloadType: 'single'
-    artifactName: '1'
-    downloadPath: '$(System.ArtifactsDirectory)'
-
+- task: PublishBuildArtifacts@1
